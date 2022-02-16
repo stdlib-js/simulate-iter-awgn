@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/simulate-iter-awgn",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Create an iterator which introduces additive white Gaussian noise.",
   "license": "Apache-2.0",
   "author": {
