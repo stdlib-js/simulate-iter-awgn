@@ -32,14 +32,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/simulate-iter-awgn
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import iterawgn from 'https://cdn.jsdelivr.net/gh/stdlib-js/simulate-iter-awgn@deno/mod.js';
+var iterawgn = require( '@stdlib/simulate-iter-awgn' );
 ```
 
 #### iterawgn( iterator, sigma\[, options] )
@@ -47,7 +63,7 @@ import iterawgn from 'https://cdn.jsdelivr.net/gh/stdlib-js/simulate-iter-awgn@d
 Returns an [iterator][mdn-iterator-protocol] which introduces [additive white Gaussian noise][awgn] (AWGN) with standard deviation `sigma`.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var arr = array2iterator( [ 1.0, 1.0, 1.0, 1.0, 1.0 ] );
 var it = iterawgn( arr, 0.2 );
@@ -82,8 +98,8 @@ The function accepts the following `options`:
 By default, an iterator uses the [improved ziggurat][@stdlib/random/base/improved-ziggurat] algorithm to generate pseudorandom numbers drawn from a standard normal distribution. To use a different PRNG, set the `prng` option.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
-import boxMuller from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-box-muller@deno/mod.js';
+var array2iterator = require( '@stdlib/array-to-iterator' );
+var boxMuller = require( '@stdlib/random-base-box-muller' );
 
 var arr = array2iterator( [ 1.0, 1.0, 1.0, 1.0, 1.0 ] );
 var it = iterawgn( arr, 0.2, {
@@ -97,7 +113,7 @@ var v = it.next().value;
 To seed an iterator, set the `seed` option.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var arr = array2iterator( [ 1.0, 1.0, 1.0, 1.0, 1.0 ] );
 var it1 = iterawgn( arr, 0.2, {
@@ -121,7 +137,7 @@ var bool = ( v1 === v2 );
 To return an iterator having a specific initial state, set the iterator `state` option.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 var arr = array2iterator( [ 1.0, 1.0, 1.0, 1.0, 1.0 ] );
 
 var it1 = iterawgn( arr, 0.2 );
@@ -169,8 +185,8 @@ var bool = ( it1.next().value === it2.next().value );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import iterSineWave from 'https://cdn.jsdelivr.net/gh/stdlib-js/simulate-iter-sine-wave@deno/mod.js';
-import iterawgn from 'https://cdn.jsdelivr.net/gh/stdlib-js/simulate-iter-awgn@deno/mod.js';
+var iterSineWave = require( '@stdlib/simulate-iter-sine-wave' );
+var iterawgn = require( '@stdlib/simulate-iter-awgn' );
 
 // Create an iterator for generating a sine wave:
 var sine = iterSineWave({
@@ -228,7 +244,7 @@ while ( true ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -258,8 +274,8 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/simulate-iter-awgn.svg
 [npm-url]: https://npmjs.org/package/@stdlib/simulate-iter-awgn
 
-[test-image]: https://github.com/stdlib-js/simulate-iter-awgn/actions/workflows/test.yml/badge.svg
-[test-url]: https://github.com/stdlib-js/simulate-iter-awgn/actions/workflows/test.yml
+[test-image]: https://github.com/stdlib-js/simulate-iter-awgn/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/simulate-iter-awgn/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/simulate-iter-awgn/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/simulate-iter-awgn?branch=main
@@ -271,13 +287,6 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/simulate-iter-awgn/tree/deno
-[umd-url]: https://github.com/stdlib-js/simulate-iter-awgn/tree/umd
-[esm-url]: https://github.com/stdlib-js/simulate-iter-awgn/tree/esm
-
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
 [chat-url]: https://gitter.im/stdlib-js/stdlib/
 
@@ -285,21 +294,29 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
+[umd]: https://github.com/umdjs/umd
+[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+[deno-url]: https://github.com/stdlib-js/simulate-iter-awgn/tree/deno
+[umd-url]: https://github.com/stdlib-js/simulate-iter-awgn/tree/umd
+[esm-url]: https://github.com/stdlib-js/simulate-iter-awgn/tree/esm
+[branches-url]: https://github.com/stdlib-js/simulate-iter-awgn/blob/main/branches.md
+
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/simulate-iter-awgn/main/LICENSE
 
 [mdn-iterator-protocol]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol
 
 [awgn]: https://en.wikipedia.org/wiki/Additive_white_Gaussian_noise
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/deno
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
-[@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random-base-improved-ziggurat/tree/deno
+[@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random-base-improved-ziggurat
 
 <!-- <related-links> -->
 
-[@stdlib/simulate/iter/awln]: https://github.com/stdlib-js/simulate-iter-awln/tree/deno
+[@stdlib/simulate/iter/awln]: https://github.com/stdlib-js/simulate-iter-awln
 
-[@stdlib/simulate/iter/awun]: https://github.com/stdlib-js/simulate-iter-awun/tree/deno
+[@stdlib/simulate/iter/awun]: https://github.com/stdlib-js/simulate-iter-awun
 
 <!-- </related-links> -->
 
