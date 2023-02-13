@@ -38,12 +38,12 @@ C -->|bundle| D[esm];
 C -->|bundle| E[deno];
 C -->|bundle| F[umd];
 
-click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/simulate/iter/awgn"
-click B href "https://github.com/stdlib-js/simulate-iter-awgn/tree/main"
-click C href "https://github.com/stdlib-js/simulate-iter-awgn/tree/production"
-click D href "https://github.com/stdlib-js/simulate-iter-awgn/tree/esm"
-click E href "https://github.com/stdlib-js/simulate-iter-awgn/tree/deno"
-click F href "https://github.com/stdlib-js/simulate-iter-awgn/tree/umd"
+%% click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/simulate/iter/awgn"
+%% click B href "https://github.com/stdlib-js/simulate-iter-awgn/tree/main"
+%% click C href "https://github.com/stdlib-js/simulate-iter-awgn/tree/production"
+%% click D href "https://github.com/stdlib-js/simulate-iter-awgn/tree/esm"
+%% click E href "https://github.com/stdlib-js/simulate-iter-awgn/tree/deno"
+%% click F href "https://github.com/stdlib-js/simulate-iter-awgn/tree/umd"
 ```
 
 [stdlib-url]: https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/simulate/iter/awgn
