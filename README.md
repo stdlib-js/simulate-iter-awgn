@@ -50,7 +50,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import iterawgn from 'https://cdn.jsdelivr.net/gh/stdlib-js/simulate-iter-awgn@esm/index.mjs';
+import iterawgn from 'https://cdn.jsdelivr.net/gh/stdlib-js/simulate-iter-awgn@v0.2.1-esm/index.mjs';
 ```
 
 #### iterawgn( iterator, sigma\[, options] )
@@ -186,7 +186,7 @@ var bool = ( it1.next().value === it2.next().value );
 <script type="module">
 
 import iterSineWave from 'https://cdn.jsdelivr.net/gh/stdlib-js/simulate-iter-sine-wave@esm/index.mjs';
-import iterawgn from 'https://cdn.jsdelivr.net/gh/stdlib-js/simulate-iter-awgn@esm/index.mjs';
+import iterawgn from 'https://cdn.jsdelivr.net/gh/stdlib-js/simulate-iter-awgn@v0.2.1-esm/index.mjs';
 
 // Create an iterator for generating a sine wave:
 var sine = iterSineWave({
